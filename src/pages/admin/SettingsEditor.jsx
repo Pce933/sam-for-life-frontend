@@ -98,6 +98,42 @@ const SECTIONS = [
       ["invoice_terms", "Invoice Terms & Payment Details", true],
     ],
   },
+  {
+    title: "Email Templates: Contact Form",
+    description: "Available placeholders: {name}, {email}, {subject}, {message}",
+    fields: [
+      ["email_contact_admin_subject", "Admin Notification Subject Line"],
+      ["email_contact_user_subject", "Visitor Confirmation Subject Line"],
+      ["email_contact_user_body", "Visitor Confirmation Email Body (HTML support)", true]
+    ]
+  },
+  {
+    title: "Email Templates: Volunteer Form",
+    description: "Available placeholders: {name}, {email}, {phone}, {skills}, {availability}, {why}",
+    fields: [
+      ["email_volunteer_admin_subject", "Admin Notification Subject Line"],
+      ["email_volunteer_user_subject", "Visitor Confirmation Subject Line"],
+      ["email_volunteer_user_body", "Visitor Confirmation Email Body (HTML support)", true]
+    ]
+  },
+  {
+    title: "Email Templates: Partnership Form",
+    description: "Available placeholders: {company}, {name}, {email}, {phone}, {interest}, {message}",
+    fields: [
+      ["email_partnership_admin_subject", "Admin Notification Subject Line"],
+      ["email_partnership_user_subject", "Visitor Confirmation Subject Line"],
+      ["email_partnership_user_body", "Visitor Confirmation Email Body (HTML support)", true]
+    ]
+  },
+  {
+    title: "Email Templates: Fundraising Form",
+    description: "Available placeholders: {name}, {email}, {idea}",
+    fields: [
+      ["email_fundraise_admin_subject", "Admin Notification Subject Line"],
+      ["email_fundraise_user_subject", "Visitor Confirmation Subject Line"],
+      ["email_fundraise_user_body", "Visitor Confirmation Email Body (HTML support)", true]
+    ]
+  }
 ];
 
 const SettingsEditor = () => {
@@ -148,8 +184,11 @@ const SettingsEditor = () => {
       <form onSubmit={save} className="space-y-6">
         {SECTIONS.map((sec) => (
           <div key={sec.title} className="sam-card p-6">
-            <h2 className="font-display text-xl font-bold mb-4">{sec.title}</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <h2 className="font-display text-xl font-bold mb-1">{sec.title}</h2>
+            {sec.description && (
+              <p className="text-xs text-[#5c6b6d] mb-4">{sec.description}</p>
+            )}
+            <div className="grid sm:grid-cols-2 gap-4 mt-4">
               {sec.fields.map(([key, label, textarea]) => (
                 <div key={key} className={textarea ? "sm:col-span-2" : ""}>
                   <label className="form-label">{label}</label>
