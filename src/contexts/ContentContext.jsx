@@ -4,15 +4,23 @@ import { getCmsAll } from "../api/client";
 const ContentContext = createContext(null);
 
 export const ContentProvider = ({ children }) => {
-  const [content, setContent] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [content, setContent] = useState(() => {
+    try {
+      const cached = localStorage.getItem("sam_cms_content");
+      return cached ? JSON.parse(cached) : null;
+    } catch {
+      return null;
+    }
+  });
+  const [loading, setLoading] = useState(!content);
   const [error, setError] = useState(null);
 
-  const refresh = useCallback(async () => {
+  const refresh = useCallback(async (showLoading = false) => {
     try {
-      setLoading(true);
+      if (showLoading) setLoading(true);
       const data = await getCmsAll();
       setContent(data);
+      localStorage.setItem("sam_cms_content", JSON.stringify(data));
       setError(null);
     } catch (e) {
       setError(e?.message || "Failed to load content");
@@ -22,7 +30,7 @@ export const ContentProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    refresh();
+    refresh(localStorage.getItem("sam_cms_content") === null);
   }, [refresh]);
 
   return (

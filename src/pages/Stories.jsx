@@ -2,6 +2,7 @@ import React from "react";
 import { Quote } from "lucide-react";
 import { useContent } from "../contexts/ContentContext";
 import Loading from "../components/Loading";
+import { optimizeUnsplashUrl } from "../lib/utils";
 
 const Stories = () => {
   const { content, loading } = useContent();
@@ -26,7 +27,7 @@ const Stories = () => {
             return (
               <article key={st.id} className="sam-card overflow-hidden p-0 grid md:grid-cols-2 gap-0">
                 <div className={`${isReverse ? "md:order-2" : ""} relative h-72 md:h-auto md:min-h-[480px] overflow-hidden`}>
-                  <img alt={st.name} className="absolute inset-0 w-full h-full object-cover" src={st.image} />
+                  <img alt={st.name} className="absolute inset-0 w-full h-full object-cover" src={optimizeUnsplashUrl(st.image, 800)} loading="lazy" />
                 </div>
                 <div className={`${isReverse ? "md:order-1" : ""} p-8 md:p-12 flex flex-col justify-center`}>
                   <Quote size={32} className="text-[#d95a40] mb-4" />

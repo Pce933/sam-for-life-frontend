@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, GraduationCap, Briefcase, Building2, Check } from "lucide-react";
 import { useContent } from "../contexts/ContentContext";
 import Loading from "../components/Loading";
+import { optimizeUnsplashUrl } from "../lib/utils";
 
 const iconMap = { graduation: GraduationCap, briefcase: Briefcase, building: Building2 };
 
@@ -30,7 +31,7 @@ const Programme = () => {
             return (
               <div key={p.id} className="sam-card p-6 md:p-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className={`${isReverse ? "md:order-2" : ""} rounded-2xl overflow-hidden aspect-[4/3]`}>
-                  <img alt={p.title} className="w-full h-full object-cover" src={p.image} />
+                  <img alt={p.title} className="w-full h-full object-cover" src={optimizeUnsplashUrl(p.image, 800)} loading="lazy" />
                 </div>
                 <div className={isReverse ? "md:order-1" : ""}>
                   <div className="flex items-center gap-3 mb-3">

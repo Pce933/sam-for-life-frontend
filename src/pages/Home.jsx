@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Heart, ArrowRight, Sparkles, Quote, GraduationCap, Briefcase, Building2 } from "lucide-react";
 import { useContent } from "../contexts/ContentContext";
 import Loading from "../components/Loading";
+import { optimizeUnsplashUrl } from "../lib/utils";
 
 const iconMap = {
   graduation: GraduationCap,
@@ -44,7 +45,7 @@ const Home = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative">
               <div className="rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-20px_rgba(28,43,45,0.25)]">
-                <img alt="Young person in a learning environment" className="w-full h-[460px] object-cover" src={s.hero_image} />
+                <img alt="Young person in a learning environment" className="w-full h-[460px] object-cover" src={optimizeUnsplashUrl(s.hero_image, 1000)} />
               </div>
               {firstStory && (
                 <div className="absolute -bottom-8 -left-6 md:-left-10 bg-white rounded-3xl p-5 shadow-xl max-w-xs hidden md:block">
@@ -110,7 +111,7 @@ const Home = () => {
               return (
                 <Link key={p.id} to="/programme" className="sam-card p-6 group">
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5">
-                    <img alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src={p.image} />
+                    <img alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src={optimizeUnsplashUrl(p.image, 600)} loading="lazy" />
                   </div>
                   <div className="flex items-center gap-3 mb-3">
                     <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#d95a40]/10 text-[#d95a40]">
@@ -140,7 +141,7 @@ const Home = () => {
             {stories.map((st) => (
               <article key={st.id} className="sam-card overflow-hidden p-0">
                 <div className="aspect-[5/4] overflow-hidden">
-                  <img alt={st.name} className="w-full h-full object-cover" src={st.image} />
+                  <img alt={st.name} className="w-full h-full object-cover" src={optimizeUnsplashUrl(st.image, 600)} loading="lazy" />
                 </div>
                 <div className="p-6">
                   <div className="font-display text-2xl font-bold">{st.name}, {st.age}</div>
