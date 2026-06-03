@@ -133,6 +133,15 @@ const SECTIONS = [
       ["email_fundraise_user_subject", "Visitor Confirmation Subject Line"],
       ["email_fundraise_user_body", "Visitor Confirmation Email Body (HTML support)", true]
     ]
+  },
+  {
+    title: "Email Templates: Donation Confirmation",
+    description: "Available placeholders: {name}, {email}, {amount}, {frequency}, {transaction_id}",
+    fields: [
+      ["email_donation_admin_subject", "Admin Notification Subject Line"],
+      ["email_donation_user_subject", "Donor Confirmation Subject Line"],
+      ["email_donation_user_body", "Donor Confirmation Email Body (HTML support)", true]
+    ]
   }
 ];
 
