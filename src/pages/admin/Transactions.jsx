@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { adminTransactions } from "../../api/client";
-import { RefreshCw, CheckCircle2, XCircle, Clock } from "lucide-react";
+import { adminTransactions, adminGetSettings } from "../../api/client";
+import { RefreshCw, CheckCircle2, XCircle, Clock, FileText, Receipt } from "lucide-react";
 import { toast } from "sonner";
+import { downloadPdf } from "../../lib/pdf";
 
 const statusBadge = (status) => {
   if (status === "paid") return { cls: "bg-green-100 text-green-700", Icon: CheckCircle2 };
@@ -11,13 +12,18 @@ const statusBadge = (status) => {
 
 const Transactions = () => {
   const [items, setItems] = useState([]);
+  const [settings, setSettings] = useState({});
   const [loading, setLoading] = useState(true);
 
   const load = async () => {
     setLoading(true);
     try {
-      const data = await adminTransactions();
-      setItems(data);
+      const [txData, settingsData] = await Promise.all([
+        adminTransactions(),
+        adminGetSettings()
+      ]);
+      setItems(txData);
+      setSettings(settingsData || {});
     } catch (err) {
       toast.error("Could not load transactions");
     } finally {
@@ -59,6 +65,7 @@ const Transactions = () => {
               <th className="px-5 py-3">Frequency</th>
               <th className="px-5 py-3">Status</th>
               <th className="px-5 py-3">Session</th>
+              <th className="px-5 py-3 text-right">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -72,11 +79,33 @@ const Transactions = () => {
                   <td className="px-5 py-3 capitalize">{it.frequency}</td>
                   <td className="px-5 py-3"><span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold ${cls}`}><Icon size={12} /> {it.payment_status || "pending"}</span></td>
                   <td className="px-5 py-3 text-xs text-[#5c6b6d] font-mono">{it.session_id?.slice(0, 16)}…</td>
+                  <td className="px-5 py-3 text-right">
+                    {it.payment_status === "paid" ? (
+                      <div className="flex justify-end gap-2">
+                        <button
+                          onClick={() => downloadPdf(it, settings, "receipt")}
+                          className="inline-flex items-center gap-1 text-xs font-semibold text-[#d95a40] hover:text-[#c14a33] border border-[#d95a40]/30 hover:border-[#d95a40] px-2.5 py-1.5 rounded-lg transition-colors bg-white shadow-sm"
+                          title="Download Receipt PDF"
+                        >
+                          <Receipt size={13} /> Receipt
+                        </button>
+                        <button
+                          onClick={() => downloadPdf(it, settings, "invoice")}
+                          className="inline-flex items-center gap-1 text-xs font-semibold text-[#1c2b2d] hover:text-black border border-[#1c2b2d]/30 hover:border-[#1c2b2d] px-2.5 py-1.5 rounded-lg transition-colors bg-white shadow-sm"
+                          title="Download Invoice PDF"
+                        >
+                          <FileText size={13} /> Invoice
+                        </button>
+                      </div>
+                    ) : (
+                      <span className="text-xs text-[#5c6b6d]">—</span>
+                    )}
+                  </td>
                 </tr>
               );
             })}
             {items.length === 0 && (
-              <tr><td colSpan={6} className="px-5 py-8 text-center text-[#5c6b6d]">No transactions yet.</td></tr>
+              <tr><td colSpan={7} className="px-5 py-8 text-center text-[#5c6b6d]">No transactions yet.</td></tr>
             )}
           </tbody>
         </table>

@@ -89,6 +89,15 @@ const SECTIONS = [
       ["social_linkedin", "LinkedIn URL"],
     ],
   },
+  {
+    title: "Receipt & Invoice Settings",
+    fields: [
+      ["receipt_charity_number", "Charity Registration Number"],
+      ["receipt_address", "Official Address", true],
+      ["receipt_thank_you", "Receipt Thank-You Message", true],
+      ["invoice_terms", "Invoice Terms & Payment Details", true],
+    ],
+  },
 ];
 
 const SettingsEditor = () => {
