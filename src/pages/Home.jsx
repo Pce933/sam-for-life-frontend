@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[#1c2b2d] text-[#faf8f5] py-20 md:py-24">
+      <section className="bg-[#1c2b2d] text-[#faf8f5] py-14 md:py-16">
         <div className="container-x">
           <div className="max-w-2xl mb-12">
             <span className="text-[#e4a834] eyebrow">{s.impact_eyebrow}</span>
