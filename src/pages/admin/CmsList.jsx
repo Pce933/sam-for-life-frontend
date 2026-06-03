@@ -69,7 +69,10 @@ const CmsList = ({ title, collection, fields, displayKey }) => {
       setLoading(false);
     }
   };
-  useEffect(() => { load(); /* eslint-disable-next-line */ }, [collection]);
+  useEffect(() => {
+    load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [collection]);
 
   const openCreate = () => setEditing(defaultsFromFields(fields));
   const openEdit = (item) => setEditing({ ...item });
