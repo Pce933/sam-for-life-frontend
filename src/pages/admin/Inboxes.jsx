@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { adminAllForms, adminDeleteForm, adminUpdateFormStatus } from "../../api/client";
 import { toast } from "sonner";
-import { Trash2, Mail, Phone, Building2, RefreshCw, Heart } from "lucide-react";
+import { Trash2, Mail, Phone, Building2, RefreshCw, Heart, Download } from "lucide-react";
+import * as XLSX from "xlsx";
 
 const TABS = [
   { key: "contact", label: "Contact", icon: Mail },
@@ -79,6 +80,81 @@ const Inboxes = () => {
     toast.success("Status updated");
     load();
   };
+  
+  const exportToExcel = () => {
+    if (!data) return;
+    try {
+      const wb = XLSX.utils.book_new();
+      const sheetKeys = ["contact", "volunteer", "partnership", "fundraise_idea", "newsletter"];
+      const sheetNames = ["Contact Submissions", "Volunteer Applications", "Partnership Inquiries", "Fundraise Ideas", "Newsletter Subscribers"];
+
+      sheetKeys.forEach((key, idx) => {
+        const list = data[key] || [];
+        let formattedData = [];
+
+        if (key === "contact") {
+          formattedData = list.map(item => ({
+            "ID": item.id,
+            "Name": item.name,
+            "Email": item.email,
+            "Subject": item.subject,
+            "Message": item.message,
+            "Status": item.status || "new",
+            "Submitted At": item.created_at?.slice(0, 19).replace("T", " ") || ""
+          }));
+        } else if (key === "volunteer") {
+          formattedData = list.map(item => ({
+            "ID": item.id,
+            "Name": item.name,
+            "Email": item.email,
+            "Phone": item.phone || "",
+            "Skills": item.skills,
+            "Availability": item.availability,
+            "Why": item.why || "",
+            "Status": item.status || "new",
+            "Submitted At": item.created_at?.slice(0, 19).replace("T", " ") || ""
+          }));
+        } else if (key === "partnership") {
+          formattedData = list.map(item => ({
+            "ID": item.id,
+            "Company": item.company,
+            "Name": item.name,
+            "Email": item.email,
+            "Phone": item.phone || "",
+            "Interest": item.interest,
+            "Message": item.message,
+            "Status": item.status || "new",
+            "Submitted At": item.created_at?.slice(0, 19).replace("T", " ") || ""
+          }));
+        } else if (key === "fundraise_idea") {
+          formattedData = list.map(item => ({
+            "ID": item.id,
+            "Name": item.name || "N/A",
+            "Email": item.email || "N/A",
+            "Idea": item.idea,
+            "Status": item.status || "new",
+            "Submitted At": item.created_at?.slice(0, 19).replace("T", " ") || ""
+          }));
+        } else if (key === "newsletter") {
+          formattedData = list.map(item => ({
+            "ID": item.id,
+            "Email": item.email,
+            "Active": item.active ? "Yes" : "No",
+            "Subscribed At": item.created_at?.slice(0, 19).replace("T", " ") || ""
+          }));
+        }
+
+        const ws = XLSX.utils.json_to_sheet(formattedData);
+        XLSX.utils.book_append_sheet(wb, ws, sheetNames[idx]);
+      });
+
+      XLSX.writeFile(wb, `SAM_for_Life_Form_Submissions_${new Date().toISOString().slice(0, 10)}.xlsx`);
+      toast.success("Excel sheet downloaded successfully");
+    } catch (err) {
+      console.error("Excel export failed:", err);
+      toast.error("Failed to export Excel file");
+    }
+  };
 
   const items = data?.[active] || [];
 
@@ -89,7 +165,14 @@ const Inboxes = () => {
           <h1 className="font-display text-3xl md:text-4xl font-bold">Inbox</h1>
           <p className="text-[#5c6b6d] mt-1">Form submissions from your website. Auto-refreshes every 15s.</p>
         </div>
-        <button onClick={load} className="btn-outline" disabled={loading}><RefreshCw size={16} className={loading ? "animate-spin" : ""} /> Refresh</button>
+        <div className="flex items-center gap-2">
+          <button onClick={exportToExcel} className="btn-primary flex items-center gap-1.5" disabled={!data || loading}>
+            <Download size={16} /> Export to Excel
+          </button>
+          <button onClick={load} className="btn-outline" disabled={loading}>
+            <RefreshCw size={16} className={loading ? "animate-spin" : ""} /> Refresh
+          </button>
+        </div>
       </div>
 
       <div className="flex gap-2 flex-wrap mb-6">
