@@ -1,0 +1,1057 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 4816
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 799.3703149606299121 Td
+(SAM for Life | SDLC & Technical Stack Documentation) Tj
+ET
+0.78 G
+0.5669291338582678 w
+56.6929133858267775 793.7010236220471597 m
+538.5870866141731312 793.7010236220471597 l
+S
+56.6929133858267775 48.1889763779527627 m
+538.5870866141731312 48.1889763779527627 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+496.067401574803057 34.0157480314960594 Td
+(Page 1) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 34.0157480314960594 Td
+(CONFIDENTIAL - FOR INTERNAL USE ONLY) Tj
+ET
+BT
+/F2 16 Tf
+18.3999999999999986 TL
+0. g
+56.6929133858267775 756.8506299212598378 Td
+(SAM for Life: Software Development Life Cycle \(SDLC\) &) Tj
+ET
+BT
+/F2 16 Tf
+18.3999999999999986 TL
+0. g
+56.6929133858267775 731.3388188976377933 Td
+(Technical Stack Documentation) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 680.3151968503937042 Td
+(---) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.118 g
+56.6929133858267775 637.7955118110235162 Td
+(1. Executive Summary) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 615.1183464566928478 Td
+(This document outlines the Software Development Life Cycle \(SDLC\) methodology, architectural design, and) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 598.1104724409448181 Td
+(technical stack used to build the web platform for **SAM for Life**. This documentation is prepared for company) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 581.1025984251967884 Td
+(submission and technical compliance auditing.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 538.5829133858267141 Td
+(---) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.118 g
+56.6929133858267775 496.0632283464566399 Td
+(2. Technical Stack Specifications) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 447.8742519685038701 Td
+(The system is designed with a decoupled architecture, dividing responsibilities between a client-side React) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 430.8663779527558404 Td
+(application and a server-side Node.js Express REST API.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 388.3466929133857661 Td
+(2.1. Frontend Client) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 368.5041732283464171 Td
+(• **Base Library:** React 19 \(Single Page Application architecture\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 351.4962992125983874 Td
+(• **Client-Side Routing:** React Router Dom v7) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 334.4884251968503008 Td
+(• **CSS & Styling Framework:** Tailwind CSS & Tailwind CSS Animate \(responsive grids, components, animations\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 317.480551181102328 Td
+(• **Dynamic Documents:**) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 300.4726771653542983 Td
+(• **PDF Generation:** `jsPDF` \(generates donation receipts and invoices client-side\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 283.4648031496062686 Td
+(• **Excel Data Exports:** `xlsx` \(SheetJS, formats and downloads form submissions into Excel workbooks\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 266.4569291338582389 Td
+(• **API Communication:** Axios \(configured with interceptors to inject JWT security tokens\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 249.4490551181102092 Td
+(• **Build System:** Craco \(CRA Webpack wrapper\)) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 206.9293700787401349 Td
+(2.2. Backend REST API) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 187.086850393700729 Td
+(• **Runtime Environment:** Node.js) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 170.0789763779526993 Td
+(• **Application Framework:** Express) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 153.0711023622046696 Td
+(• **Database Driver:** Mongoose \(MongoDB Object Document Mapper\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 136.0632283464566399 Td
+(• **Email Engine:** Nodemailer \(SMTP configuration pointing to IONOS mail servers\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 119.0553543307086102 Td
+(• **Security & Auth:** `bcryptjs` \(password hashing\) and `jsonwebtoken` \(session signing\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 102.0474803149605805 Td
+(• **Payment Processor:** Stripe SDK \(with a configurable local simulation engine for sandboxed testing\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4636
+>>
+stream
+0.5669291338582678 w
+0.78 G
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 799.3703149606299121 Td
+(SAM for Life | SDLC & Technical Stack Documentation) Tj
+ET
+0.78 G
+0.5669291338582678 w
+56.6929133858267775 793.7010236220471597 m
+538.5870866141731312 793.7010236220471597 l
+S
+56.6929133858267775 48.1889763779527627 m
+538.5870866141731312 48.1889763779527627 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+496.067401574803057 34.0157480314960594 Td
+(Page 2) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 34.0157480314960594 Td
+(CONFIDENTIAL - FOR INTERNAL USE ONLY) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 731.3388188976377933 Td
+(---) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.118 g
+56.6929133858267775 688.819133858267719 Td
+(3. Database Schema Models) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 640.6301574803148924 Td
+(The system runs on MongoDB. If the connection fails or is unconfigured, the server automatically switches to a) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 623.6222834645668627 Td
+(local file-based database \(`db.json`\) to guarantee service availability.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 581.1025984251967884 Td
+(3.1. SiteSettings \(Singleton Database Configuration\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 561.2600787401574962 Td
+(Stores all customizable website copy, official charity details, and email templates:) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 544.2522047244094665 Td
+(• `receipt_charity_number`, `receipt_address`, `receipt_thank_you` \(used for PDF generation\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 527.2443307086614368 Td
+(• **Custom Email Templates:** Store HTML bodies and subject lines for public forms:) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 510.2364566929133503 Td
+(• `email_contact_admin_subject`, `email_contact_user_subject`, `email_contact_user_body`) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 493.2285826771653205 Td
+(• `email_volunteer_admin_subject`, `email_volunteer_user_subject`, `email_volunteer_user_body`) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 476.2207086614172908 Td
+(• `email_partnership_admin_subject`, `email_partnership_user_subject`, `email_partnership_user_body`) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 459.2128346456692611 Td
+(• `email_fundraise_admin_subject`, `email_fundraise_user_subject`, `email_fundraise_user_body`) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 442.2049606299212314 Td
+(• `email_donation_admin_subject`, `email_donation_user_subject`, `email_donation_user_body`) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 399.6852755905511003 Td
+(3.2. PaymentTransaction \(Donation Records\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 379.8427559055117513 Td
+(Tracks payment states, Stripe session IDs, and donor info:) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 362.8348818897637216 Td
+(• `session_id` \(String, Unique\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 345.8270078740156919 Td
+(• `amount` \(Number\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 328.8191338582676053 Td
+(• `currency` \(String, default: `'gbp'`\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 311.8112598425195756 Td
+(• `frequency` \(String: `'one-time'` or `'monthly'`\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 294.8033858267715459 Td
+(• `donor_name` / `donor_email` \(Strings\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 277.7955118110235162 Td
+(• `payment_status` \(String: `'initiated'`, `'paid'`, etc.\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 260.7876377952754865 Td
+(• `receipt_sent` \(Boolean, default: `false` - tracks whether receipts have been successfully emailed\)) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 218.2679527559054122 Td
+(---) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.118 g
+56.6929133858267775 175.748267716535338 Td
+(4. Software Development Life Cycle \(SDLC\) Process) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 127.559291338582625 Td
+(The project followed a structured, iterative Software Development Life Cycle matching industrial Agile practices.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 6391
+>>
+stream
+0.5669291338582678 w
+0.78 G
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 799.3703149606299121 Td
+(SAM for Life | SDLC & Technical Stack Documentation) Tj
+ET
+0.78 G
+0.5669291338582678 w
+56.6929133858267775 793.7010236220471597 m
+538.5870866141731312 793.7010236220471597 l
+S
+56.6929133858267775 48.1889763779527627 m
+538.5870866141731312 48.1889763779527627 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+496.067401574803057 34.0157480314960594 Td
+(Page 3) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 34.0157480314960594 Td
+(CONFIDENTIAL - FOR INTERNAL USE ONLY) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 756.8506299212598378 Td
+(4.1. Phase 1: Requirements Analysis & System Planning) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 737.0081102362204319 Td
+(• **Objective:** Define features required for a donor-facing non-profit platform and its corresponding administration) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 720.0002362204724022 Td
+(portal.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 702.9923622047243725 Td
+(• **Scope Defined:**) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 685.9844881889763428 Td
+(  - Dynamic content management \(CMS\) for stories, program details, news, and site settings.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 668.9766141732283131 Td
+(  - SMTP email triggers for form submissions \(automatic auto-reply receipts for visitors, notifications to admins\).) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 651.9687401574802834 Td
+(  - Secure donation checkout with card payments.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 634.9608661417322537 Td
+(  - In-browser receipt and invoice downloads.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 617.952992125984224 Td
+(  - Fast load times on mobile networks.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 575.4333070866141497 Td
+(4.2. Phase 2: System Architecture Design) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 555.5907874015747439 Td
+(• **Frontend:** A responsive Single Page Application. We selected `jsPDF` for client-side PDF rendering to avoid) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 538.5829133858267141 Td
+(heavy server-side image processing.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 521.5750393700786844 Td
+(• **Backend:** Express API structure. Database operations were wrapped in a singleton Mongoose database) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 504.5671653543306547 Td
+(helper, featuring a fallback JSON database for zero-dependency local setups.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 487.559291338582625 Td
+(• **Security Model:** Enforces HTTPS, hashes admin passwords with salt factors \(bcrypt\), and secures) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 470.5514173228345953 Td
+(administrative routes using JSON Web Tokens \(JWT\) sent via HTTP Bearer headers.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 428.0317322834645211 Td
+(4.3. Phase 3: Implementation & Development) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 408.1892125984251152 Td
+(• **Database & Seeding:** Created schema definitions and structured seed migrations that populate initial default) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 391.1813385826770855 Td
+(website texts and SMTP templates on database startup.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 374.1734645669290558 Td
+(• **SMTP Notifications:** Wrote a unified mailer module that compiles HTML containers and replaces customizable) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 357.1655905511810261 Td
+(variables \(e.g. `{name}`, `{amount}`\) on form submissions.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 340.1577165354329964 Td
+(• **Excel Data Exports:** Installed SheetJS \(`xlsx`\) and created a utility that gathers user inbox logs, partitions) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 323.1498425196849666 Td
+(them by database collections, and formats them into a multi-sheet spreadsheet.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 306.1419685039369369 Td
+(• **Speed Optimizations:**) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 289.1340944881889072 Td
+(  - Implemented query parallelization in `/api/cms/all` using `Promise.all\(\)`.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 272.1262204724408775 Td
+(  - Added CDN Edge caching headers \(`Cache-Control: s-maxage=10, stale-while-revalidate=3600`\).) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 255.1183464566928478 Td
+(  - Added frontend LocalStorage caching using the Stale-While-Revalidate \(SWR\) rendering pattern.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 238.1104724409448181 Td
+(  - Implemented dynamic Unsplash image compression and lazy loading.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 g
+56.6929133858267775 195.5907874015747439 Td
+(4.4. Phase 4: Testing & Quality Assurance) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 175.748267716535338 Td
+(• **Automatic Compilation Checks:** Validated frontend Webpack compiler builds and Express server start logs.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 158.7403937007873083 Td
+(• **Payment & Webhook Verification:** Simulated transaction checkouts using mock sessions, confirming that the) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 141.7325196850392786 Td
+(backend correctly handles payments and triggers emails without duplicating them.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 124.7246456692912489 Td
+(• **Cross-Origin Resource Sharing \(CORS\):** Validated frontend/backend connectivity locally and in simulated) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 107.7167716535432191 Td
+(production environments.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 1811
+>>
+stream
+0.5669291338582678 w
+0.78 G
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 799.3703149606299121 Td
+(SAM for Life | SDLC & Technical Stack Documentation) Tj
+ET
+0.78 G
+0.5669291338582678 w
+56.6929133858267775 793.7010236220471597 m
+538.5870866141731312 793.7010236220471597 l
+S
+56.6929133858267775 48.1889763779527627 m
+538.5870866141731312 48.1889763779527627 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+496.067401574803057 34.0157480314960594 Td
+(Page 4) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 34.0157480314960594 Td
+(CONFIDENTIAL - FOR INTERNAL USE ONLY) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 756.8506299212598378 Td
+(4.5. Phase 5: Deployment & Environment Configuration) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 737.0081102362204319 Td
+(• **Frontend Deployment:** Static web hosting on Vercel Edge Networks, linked with the custom domain) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 720.0002362204724022 Td
+(`samforlife.org` \(and automatic SSL configuration\).) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 702.9923622047243725 Td
+(• **Backend Deployment:** Serverless Node.js functions on Vercel, connected to a MongoDB Atlas cluster hosted) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 685.9844881889763428 Td
+(on AWS.) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 668.9766141732283131 Td
+(• **Alternative Database Setup:** Configured step-by-step setup guides to host secure, password-protected) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56.6929133858267775 651.9687401574802834 Td
+(MongoDB databases on an AWS EC2 instance with custom EBS storage sizes under the AWS Free Tier.) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+25 0 obj
+<<
+/Producer (jsPDF 4.2.1)
+/CreationDate (D:20260605122555+05'30')
+>>
+endobj
+26 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000018427 00000 n 
+0000020267 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000005020 00000 n 
+0000005157 00000 n 
+0000009845 00000 n 
+0000009982 00000 n 
+0000016425 00000 n 
+0000016563 00000 n 
+0000018502 00000 n 
+0000018628 00000 n 
+0000018759 00000 n 
+0000018893 00000 n 
+0000019031 00000 n 
+0000019155 00000 n 
+0000019284 00000 n 
+0000019416 00000 n 
+0000019552 00000 n 
+0000019680 00000 n 
+0000019807 00000 n 
+0000019936 00000 n 
+0000020069 00000 n 
+0000020171 00000 n 
+0000020520 00000 n 
+0000020606 00000 n 
+trailer
+<<
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <BEA5387F86B40A559AF0447FEDDFD01E> <BEA5387F86B40A559AF0447FEDDFD01E> ]
+>>
+startxref
+20710
+%%EOF
